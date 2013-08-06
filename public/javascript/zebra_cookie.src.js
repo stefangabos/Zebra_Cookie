@@ -8,8 +8,8 @@
  *  For more resources visit {@link http://stefangabos.ro/}
  *
  *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    1.0.1 (last revision: November 03, 2011)
- *  @copyright  (c) 2011 Stefan Gabos
+ *  @version    1.0.1 (last revision: August 06, 2013)
+ *  @copyright  (c) 2011 - 2013 Stefan Gabos
  *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
  *  @package    Zebra_Cookie
  */
@@ -42,7 +42,7 @@
             // remove the cookie by setting its expiration date in the past
             return this.write(name, '', -1);
 
-        }
+        };
 
         /**
          *  Reads the value of a cookie.
@@ -76,7 +76,7 @@
             // return the cookie's value
             return matches ? decodeURIComponent(matches[2]) : null;
 
-        }
+        };
 
         /**
          *  Sets a cookie in the browser.
@@ -149,9 +149,9 @@
                 // if required, set the cookie to be transmitted only over a secure HTTPS connection from the client
                 (secure ? '; secure' : '');
 
-        }
+        };
 
-    }
+    };
 
     // make the plugin available in jQuery's namespace
     $.cookie = new Zebra_Cookie();
