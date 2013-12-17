@@ -1,0 +1,18 @@
+{
+  "name": "Zebra_Cookie",
+  "description": "An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies.",
+  "version": "1.0.2",
+  "license": "LGPL",
+  "main": "public/javascript/zebra_pin.js",
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json",
+    "zebra-cookie.jquery.json",
+    "*.md"
+  ],
+  "keywords": [
+    "cookie"
+  ]
+}
