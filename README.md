@@ -1,6 +1,6 @@
 ## Zebra_Cookie
 
-####An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies.
+####An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies
 
 ##Features
 
@@ -10,16 +10,22 @@
 
 ##Requirements
 
-Zebra_Cookie requires jQuery 1.0+
+**Zebra_Cookie** requires jQuery 1.0+
 
 ##How to use
-First, load the latest version of jQuery from a CDN and provide a fallback to a local source, like:
 
-```html
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="public/javascript/jquery-1.9.1.js"><\/script>')</script>
+Zebra_Cookie is also available as a [Bower](http://bower.io/) package. To install it use:
+
+```
+bower install zebra_cookie
 ```
 
+Load the latest version of jQuery from a CDN and provide a fallback to a local source, like:
+
+```html
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="path/to/jquery-1.12.0.js"><\/script>')</script>
+```
 Load the Zebra_Cookie plugin
 
 ```html
