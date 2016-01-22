@@ -24,9 +24,6 @@
     "client",
     "browser"
   ],
-  "dependencies": {
-    "jquery": ">=1.0.0 <2.x"
-  },
   "licenses": [
     {
       "type": "LGPL",
