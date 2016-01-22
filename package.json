@@ -1,14 +1,31 @@
 {
   "name": "zebra_cookie",
-  "description": "An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies.",
+  "version": "1.0.4",
+  "main": "public/javascript/zebra_cookie.js",
+  "homepage": "https://github.com/stefangabos/Zebra_Cookie",
   "author": {
     "name": "Stefan Gabos",
     "email": "contact@stefangabos.ro"
   },
-  "homepage": "http://www.stefangabos.ro/jquery/zebra-cookie/",
+  "description": "An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies",
   "repository": {
     "type": "git",
     "url": "https://github.com/stefangabos/Zebra_Cookie.git"
+  },
+  "bugs": {
+    "url": "http://github.com/stefangabos/Zebra_Cookie/issues",
+    "email": "contact@stefangabos.ro"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "cookie",
+    "cookies",
+    "client",
+    "browser"
+  ],
+  "dependencies": {
+    "jquery": ">=1.0.0 <2.x"
   },
   "licenses": [
     {
@@ -16,14 +33,6 @@
       "url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
     }
   ],
-  "version": "1.0.4",
-  "keywords": [
-    "cookie"
-  ],
-  "bugs": {
-    "url": "http://github.com/stefangabos/Zebra_Cookie/issues",
-    "email": "contact@stefangabos.ro"
-  },
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-jshint": "*",
