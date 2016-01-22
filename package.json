@@ -1,6 +1,6 @@
 {
   "name": "zebra_cookie",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "public/javascript/zebra_cookie.js",
   "homepage": "https://github.com/stefangabos/Zebra_Cookie",
   "author": {
