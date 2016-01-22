@@ -32,10 +32,11 @@
 
             <h4>Installation</h4>
 
-            <p>Load the latest version of jQuery either from a local source, or from a CDN</p>
+            <p>Load the latest version of jQuery from a CDN and provide a fallback to a local source, like:</p>
 
             <pre class="brush:html">
-            &lt;script type="text/javascript" src="path/to/jQuery.js"&gt;&lt;/script&gt;
+            &lt;script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+            &lt;script>window.jQuery || document.write('&lt;script src="path/to/jquery-1.12.0.js">&lt;\/script>')&lt;/script>
             </pre>
 
             <p>Load the Zebra_Cookie plugin</p>
