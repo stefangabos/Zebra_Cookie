@@ -65,4 +65,4 @@ $(document).ready(function() {
 });
 ```
 
-Detailed description of available methods can be found on the **[project's homepage](http://stefangabos.ro/jquery/zebra_cookie/)**
+Detailed description of available methods can be found on the **[project's homepage](http://stefangabos.ro/jquery/zebra-cookie/)**
