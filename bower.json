@@ -20,6 +20,7 @@
   "ignore": [
     ".gitattributes",
     ".gitignore",
+    ".npmignore",
     "Gruntfile.js",
     "package.json",
     "README.md",
