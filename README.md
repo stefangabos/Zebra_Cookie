@@ -14,13 +14,13 @@
 
 ##How to use
 
-Zebra_Cookie is available as a [Bower](http://bower.io/) package. To install it use:
+Zebra_Cookie is available as a [Bower package](http://bower.io/). To install it use:
 
 ```
 bower install zebra_cookie
 ```
 
-Zebra_Cookie is also available as a [npm](https://www.npmjs.com/) package. To install it use:
+Zebra_Cookie is also available as a [npm package](https://www.npmjs.com/). To install it use:
 
 ```
 npm install zebra_cookie
