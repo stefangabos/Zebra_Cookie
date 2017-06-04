@@ -1,7 +1,6 @@
 {
   "name": "zebra_cookie",
-  "version": "1.0.7",
-  "main": "public/javascript/zebra_cookie.js",
+  "main": "dist/zebra_cookie.min.js",
   "homepage": "https://github.com/stefangabos/Zebra_Cookie",
   "authors": [
     "Stefan Gabos <contact@stefangabos.ro>"
@@ -11,19 +10,22 @@
     "cookie",
     "cookies",
     "client",
-    "browser"
+    "browser",
+    "jquery"
   ],
   "dependencies": {
-    "jquery": ">=1.0.0 <2.x"
+    "jquery": ">=1.7.0"
   },
   "license": "LGPL",
   "ignore": [
+    "examples/README.md",
+    "src/*",
     ".gitattributes",
     ".gitignore",
     ".npmignore",
+    "bower.json",
+    "eslint.json",
     "Gruntfile.js",
-    "package.json",
-    "README.md",
-    "bower.json"
+    "package.json"
   ]
 }
