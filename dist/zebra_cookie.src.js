@@ -3,18 +3,16 @@
  *
  *  An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies
  *
- *  Visit {@link http://stefangabos.ro/jquery/zebra-cookie/} for more information
- *
- *  For more resources visit {@link http://stefangabos.ro/}
+ *  Read more {@link https://github.com/stefangabos/Zebra_Cookie/ here}
  *
  *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    1.0.7 (last revision: January 22, 2016)
- *  @copyright  (c) 2011 - 2016 Stefan Gabos
+ *  @version    1.0.8 (last revision: June 04, 2017)
+ *  @copyright  (c) 2011 - 2017 Stefan Gabos
  *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
  *  @package    Zebra_Cookie
  */
 
-;(function($) {
+(function($) {
 
     'use strict';
 
@@ -129,11 +127,11 @@
             // if "expire" is a number, set the expiration date to as many seconds from now as specified by "expire"
             if (expire && typeof expire === 'number') date.setTime(date.getTime() + expire * 1000);
 
-                // if "expire" is not specified or is a bogus value, set it to "null"
-                else expire = null;
+            // if "expire" is not specified or is a bogus value, set it to "null"
+            else expire = null;
 
             // set the cookie
-            return document.cookie =
+            return (document.cookie =
 
                 // set the name/value pair
                 // and also make sure we escape some special characters in the process
@@ -143,13 +141,13 @@
                 (expire ? '; expires=' + date.toGMTString() : '') +
 
                 // if specified, set the path on the server in which the cookie will be available on
-                '; path=' + (path ? path : '/') +
+                '; path=' + (path || '/') +
 
                 // if specified, set the the domain that the cookie is available on
                 (domain ? '; domain=' + domain : '') +
 
                 // if required, set the cookie to be transmitted only over a secure HTTPS connection from the client
-                (secure ? '; secure' : '');
+                (secure ? '; secure' : ''));
 
         };
 
