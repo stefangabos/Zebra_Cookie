@@ -1,12 +1,12 @@
 /**
  *  Zebra_Cookie
  *
- *  An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies
+ *  An ridiculously small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies
  *
  *  Read more {@link https://github.com/stefangabos/Zebra_Cookie/ here}
  *
  *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    1.0.8 (last revision: June 04, 2017)
+ *  @version    1.1.0 (last revision: June 05, 2017)
  *  @copyright  (c) 2011 - 2017 Stefan Gabos
  *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
  *  @package    Zebra_Cookie
