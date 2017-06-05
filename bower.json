@@ -5,7 +5,7 @@
   "authors": [
     "Stefan Gabos <contact@stefangabos.ro>"
   ],
-  "description": "An extremely small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies",
+  "description": "An ridiculously small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies",
   "keywords": [
     "cookie",
     "cookies",
@@ -14,7 +14,7 @@
     "jquery"
   ],
   "dependencies": {
-    "jquery": ">=1.7.0"
+    "jquery": ">=1.0.0"
   },
   "license": "LGPL",
   "ignore": [
