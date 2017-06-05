@@ -6,16 +6,18 @@
 
         <meta charset="utf-8">
 
-        <title>Zebra_Cookie examples</title>
+        <title>Zebra_Accordion examples</title>
 
-        <link rel="stylesheet" href="public/css/reset.css" type="text/css">
-        <link rel="stylesheet" href="public/css/style.css" type="text/css">
-        <link rel="stylesheet" href="libraries/syntaxhighlighter/public/css/shCoreDefault.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.css" />
 
-        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shCore.js"></script>
-        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shBrushJScript.js"></script>
-        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shBrushXml.js"></script>
-        <script type="text/javascript" src="libraries/syntaxhighlighter/public/javascript/shBrushCSS.js"></script>
+        <link rel="stylesheet" href="examples.css" type="text/css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.min.js"></script>
 
         <script type="text/javascript">
             SyntaxHighlighter.defaults['toolbar'] = false;
@@ -26,59 +28,100 @@
 
     <body>
 
-        <div class="main-wrapper">
+        <div class="container">
 
-            <h2>Zebra_Cookie examples</h2>
+            <div class="row">
 
-            <h4>Installation</h4>
+                <div class="col-xs-12">
 
-            <p>Load the latest version of jQuery from a CDN and provide a fallback to a local source, like:</p>
+                    <div class="page-header">
+                        <h1>Zebra_Cookie Demos</h1>
+                    </div>
 
-            <pre class="brush:html">
-            &lt;script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-            &lt;script>window.jQuery || document.write('&lt;script src="path/to/jquery-1.12.0.js">&lt;\/script>')&lt;/script>
-            </pre>
+                    <h5><strong>1. Creating session cookies.</strong></h5>
 
-            <p>Load the Zebra_Cookie plugin</p>
+                    <p>
+                        A session cookie expires when the browser is closed.<br>
+                        <a href="javascript: void(0)" id="example1">Run this example</a> and check the browser's console.
+                    </p>
 
-            <pre class="brush:html">
-            &lt;script type="text/javascript" src="path/to/zebra_cookie.js"&gt;&lt;/script&gt;
-            </pre>
+                    <pre class="brush:javascript">
+                    // create a session cookie
+                    $.cookie.write('Zebra_Cookie_Example1', 'Hello, I am Example1');
 
-            <div class="hr"></div>
+                    // print cookie values to the console
+                    console.log($.cookie.read('Zebra_Cookie_Example1'));
+                    </pre>
 
-            <h4>Usage</h4>
+                    <hr>
 
-            <pre class="brush:javascript">
-            // inside the DOM-ready function
-            // a "cookie" object will be available in jQuery&rsquo;s namespace
-            // the object exposes 3 methods that you can use to write, read and delete cookies
-            $(document).ready(function() {
+                    <h5><strong>2. Creating cookies with an expiration time</strong></h5>
 
-                // create a session cookie (expires when the browser closes)
-                $.cookie.write('cookie_name', 'cookie_value');
+                    <p>
+                        The expiration time must be set in <code>seconds</code>.<br>
+                        <a href="javascript: void(0)" id="example2">Run this example</a> and check the browser's console.
+                    </p>
 
-                // create a cookie that expires in 1 day
-                $.cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
+                    <pre class="brush:javascript">
+                    // create a cookie that expires in 1 day)
+                    $.cookie.write('Zebra_Cookie_Example2', 'Hello, I am Example2', 24 * 60 * 60);
 
-                // read a cookie&rsquo;s value
-                // following the examples above, this should return "cookie_value"
-                $.cookie.read('cookie_name');
+                    // print cookie values to the console
+                    console.log($.cookie.read('Zebra_Cookie_Example2'));
+                    </pre>
 
-                // the "read" method returns null if the cookie doesn&rsquo;t exist
-                $.cookie.read('non_existing_cookie_name');
+                    <hr>
 
-                // delete the cookie
-                $.cookie.destroy('cookie_name');
+                    <h5><strong>3. Reading cookie value</strong></h5>
 
-            });
-            </pre>
+                    <p>
+                        <code>$.cookie.read</code> returns <code>null</code> if the read cookie is not set.<br>
+                        <a href="javascript: void(0)" id="example3">Run this example</a> and check the browser's console.
+                    </p>
+
+                    <pre class="brush:javascript">
+                    // read the value of the cookies set in example 1 and 2
+                    var example1 = $.cookie.read('Zebra_Cookie_Example1');
+                    var example2 = $.cookie.read('Zebra_Cookie_Example2');
+
+                    // if example 1 has been run
+                    if (example1) console.log('Value of cookie from example 1 is: "' + example1 + '"');
+
+                    // if example 1 has not yet been run
+                    else console.log('"Zebra_Cookie_Example1" does not exist');
+
+                    // if example 2 has been run
+                    if (example2) console.log('Value of cookie from example 2 is: "' + example2 + '"');
+
+                    // if example 2 has not yet been run
+                    else console.log('"Zebra_Cookie_Example2" does not exist');
+                    </pre>
+
+                    <hr>
+
+                    <h5><strong>4. Deleting cookies</strong></h5>
+
+                    <p>
+                        <a href="javascript: void(0)" id="example4">Run this example</a> and check the browser's console.
+                    </p>
+
+                    <pre class="brush:javascript">
+                    // delete cookie from example 1
+                    $.cookie.destroy('Zebra_Cookie_Example1');
+
+                    // print cookie values to the console
+                    console.log($.cookie.read('Zebra_Cookie_Example1'));
+                    </pre>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <script type="text/javascript" src="public/javascript/jquery-1.12.0.js"></script>
-        <script type="text/javascript" src="../public/javascript/zebra_cookie.js"></script>
-        <script type="text/javascript" src="public/javascript/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../dist/zebra_cookie.min.js"></script>
+        <script type="text/javascript" src="examples.js"></script>
 
     </body>
 
