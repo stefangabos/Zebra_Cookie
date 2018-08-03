@@ -10,8 +10,7 @@
     "cookie",
     "cookies",
     "client",
-    "browser",
-    "jquery"
+    "browser"
   ],
   "dependencies": {
     "jquery": ">=1.0.0"
