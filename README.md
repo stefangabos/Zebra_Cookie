@@ -6,15 +6,15 @@
 
 [![npm](https://img.shields.io/npm/v/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![Total](https://img.shields.io/npm/dt/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![Monthly](https://img.shields.io/npm/dm/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![License](https://img.shields.io/npm/l/zebra_cookie.svg)](https://github.com/stefangabos/Zebra_Cookie/blob/master/LICENSE.md)
 
-## Support the development of this project
-
-[![Donate](https://img.shields.io/badge/Be%20kind%20%7C%20Donate%20$3%20with%20-%20PayPal%20-brightgreen.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BB4S849EMJH48)
-
 ## Features
 
 - very easy to write, read and delete cookies
 - simple and intuitive syntax
-- extremely small: with around 500 bytes when minified, it is probably the smallest and most optimized API for handling browser cookies
+- extremely small: with around 500 bytes when minified (350 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies
+
+## Demo
+
+See the [demos](https://stefangabos.github.io/Zebra_Cookie/)
 
 ## Installation
 
@@ -41,6 +41,7 @@ Load Zebra Cookie:
 ```
 
 Alternatively, you can load Zebra Cookie from [JSDelivr CDN](https://www.jsdelivr.com/package/npm/zebra_cookie) like this:
+
 ```html
 <!-- for the most recent version, not recommended in production -->
 <script src="https://cdn.jsdelivr.net/npm/zebra_cookie@latest/dist/zebra_cookie.min.js"></script>
@@ -54,24 +55,24 @@ Alternatively, you can load Zebra Cookie from [JSDelivr CDN](https://www.jsdeliv
 Usage
 
 ```javascript
-// a "cookie" object will be available in the global namespace
+// at this point "Cookie" object will be available in the global namespace
 // the object exposes 3 methods that you can use to write, read and delete cookies
 
 // create a session cookie (expires when the browser closes)
-cookie.write('cookie_name', 'cookie_value');
+Cookie.write('cookie_name', 'cookie_value');
 
 // create a cookie that expires in 1 day
-cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
+Cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
 
 // read a cookie’s value
 // following the examples above, this should return "cookie_value"
-cookie.read('cookie_name');
+Cookie.read('cookie_name');
 
 // the "read" method returns null if the cookie doesn’t exist
-cookie.read('non_existing_cookie_name');
+Cookie.read('non_existing_cookie_name');
 
 // delete the cookie
-cookie.destroy('cookie_name');
+Cookie.destroy('cookie_name');
 ```
 
 ## Methods
@@ -88,10 +89,10 @@ Returns `TRUE` on success or `FALSE` otherwise.
 
 ```javascript
 // create a session cookie (expires when the browser closes)
-cookie.write('cookie_name', 'cookie_value');
+Cookie.write('cookie_name', 'cookie_value');
 
 // delete the cookie
-cookie.destroy('cookie_name');
+Cookie.destroy('cookie_name');
 ```
 
 ### `read(name)`
@@ -106,11 +107,11 @@ Returns the value of the requested cookie or `null` if the cookie doesn't exist.
 
 ```javascript
 // create a session cookie (expires when the browser closes)
-cookie.write('cookie_name', 'cookie_value');
+Cookie.write('cookie_name', 'cookie_value');
 
 // read a cookie's value
 // following the examples above, this should return "cookie_value"
-cookie.read('cookie_name');
+Cookie.read('cookie_name');
 ```
 
 ### `write(name, value, [expire = 0], [path = /], [domain = ""], [secure = FALSE])`
@@ -135,13 +136,13 @@ Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
 
 ```javascript
 // create a session cookie (expires when the browser closes)
-cookie.write('cookie_name', 'cookie_value');
+Cookie.write('cookie_name', 'cookie_value');
 
 // create a cookie that expires in 1 day
-cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
+Cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
 
 ```
 
-## Demo
+## Support the development of this project
 
-See the [demos](http://stefangabos.github.io/Zebra_Cookie/)
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BB4S849EMJH48)
