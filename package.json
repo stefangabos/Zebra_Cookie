@@ -19,8 +19,7 @@
     "cookie",
     "cookies",
     "client",
-    "browser",
-    "jquery"
+    "browser"
   ],
   "bugs": {
     "url": "https://github.com/stefangabos/Zebra_cookie/issues",
