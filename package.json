@@ -1,6 +1,6 @@
 {
   "name": "zebra_cookie",
-  "description": "An ridiculously small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies",
+  "description": "A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies",
   "author": {
     "name": "Stefan Gabos",
     "email": "contact@stefangabos.ro"

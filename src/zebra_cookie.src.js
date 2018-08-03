@@ -1,7 +1,7 @@
 /**
  *  Zebra_Cookie
  *
- *  An ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies
+ *  A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies
  *
  *  Read more {@link https://github.com/stefangabos/Zebra_Cookie/ here}
  *
