@@ -1,3 +1,7 @@
+## version 2.0.0 (August 05, 2018)
+
+- removed jQuery dependency
+
 ## version 1.1.0 (June 05, 2017)
 
 - new folder structure
