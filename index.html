@@ -4,14 +4,26 @@
 
     <head>
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-431275-9"></script>
+        <script>
+        if (document.location.hostname !== '' && document.location.hostname.indexOf('localhost') !== 0) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-431275-9');
+        }
+        </script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Zebra_Cookie is a ridiculously small (~500 bytes minified) jQuery plugin for writing, reading and deleting cookies.">
-        <title>Zebra_Cookie - a ridiculously small jQuery plugin for writing, reading and deleting cookies</title>
+        <meta name="description" content="A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Zebra Cookie - A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/united/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.css" />
 
         <link rel="stylesheet" href="examples.css" type="text/css">
@@ -30,7 +42,17 @@
 
     <body>
 
-        <a href="https://github.com/stefangabos/Zebra_Cookie"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Zebra Cookie</h1>
+                <p>a ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies</p>
+                <hr>
+                <p>
+                    <a href="https://github.com/stefangabos/Zebra_Cookie/archive/master.zip" class="btn btn-primary btn-lg" role="button" style="text-decoration: none">Download</a>
+                    <a href="https://github.com/stefangabos/Zebra_Cookie" class="btn btn-primary btn-lg" role="button" style="text-decoration: none">View on GitHub</a>
+                </p>
+            </div>
+        </div>
 
         <div class="container">
 
@@ -38,84 +60,145 @@
 
                 <div class="col-xs-12">
 
-                    <div class="page-header">
-                        <h1>Zebra_Cookie Demos</h1>
+                    <p>
+                        Zebra Cookie is a ridiculously small (~500 bytes minified, 350 bytes gzipped) JavaScript API for
+                        writing, reading and deleting browser cookies
+                    </p><br>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            01. <a href="#session-cookies">Session cookies</a><br>
+                            02. <a href="#expiration-time">Expiration time</a><br>
+                            03. <a href="#cookie-value">Reading cookie value</a><br>
+                            04. <a href="#deleting-cookies">Deleting cookies</a><br>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>
                     </div>
 
-                    <h5><strong>1. Creating session cookies.</strong></h5>
+                    <!-- =========================================================================================== -->
+
+                    <a name="session-cookies"></a>
+
+                    <br><h3><strong>1.</strong> Session cookies</h3>
 
                     <p>
-                        A session cookie expires when the browser is closed.<br>
-                        <a href="javascript: void(0)" id="example1">Run this example</a> and check the browser's console.
+                        A session cookie expires when the browser is closed.
                     </p>
 
                     <pre class="brush:javascript">
                     // create a session cookie
-                    $.cookie.write('Zebra_Cookie_Example1', 'Hello, I am Example1');
+                    Cookie.write('session_cookie', 'Hello, I am a session cookie. I will expire when the browser is closed');
 
                     // print cookie values to the console
-                    console.log($.cookie.read('Zebra_Cookie_Example1'));
+                    console.log(Cookie.read('session_cookie'));
                     </pre>
 
-                    <hr>
+                    <div class="well">
+                        <a href="javascript: void(0)" id="example1">Run the code</a> and check the browser's console.
+                    </div>
 
-                    <h5><strong>2. Creating cookies with an expiration time</strong></h5>
+                    <div class="top">
+                        <a href="#top" class="small">⯅ To the top</a>
+                    </div>
+
+                    <!-- =========================================================================================== -->
+
+                    <a name="expiration-time"></a>
+
+                    <h3><strong>2.</strong> Expiration time</h3>
 
                     <p>
-                        The expiration time must be set in <code>seconds</code>.<br>
-                        <a href="javascript: void(0)" id="example2">Run this example</a> and check the browser's console.
+                        The expiration time must be set in <code>seconds</code>. <br>
+                        The cookie will expire and be removed from the browser after the set number of seconds pass since
+                        the creation of the cookie.
                     </p>
 
                     <pre class="brush:javascript">
                     // create a cookie that expires in 1 day)
-                    $.cookie.write('Zebra_Cookie_Example2', 'Hello, I am Example2', 24 * 60 * 60);
+                    Cookie.write('expiring_cookie', 'Hello, I am a cookie that will expire in 86400 seconds (1 day)', 24 * 60 * 60);
 
                     // print cookie values to the console
-                    console.log($.cookie.read('Zebra_Cookie_Example2'));
+                    console.log(Cookie.read('expiring_cookie'));
                     </pre>
 
-                    <hr>
+                    <div class="well">
+                        <a href="javascript: void(0)" id="example2">Run the code</a> and check the browser's console.
+                    </div>
 
-                    <h5><strong>3. Reading cookie value</strong></h5>
+                    <div class="top">
+                        <a href="#top" class="small">⯅ To the top</a>
+                    </div>
+
+                    <!-- =========================================================================================== -->
+
+                    <a name="cookie-value"></a>
+
+                    <h3><strong>3.</strong> Reading cookie value</h3>
 
                     <p>
-                        <code>$.cookie.read</code> returns <code>null</code> if the read cookie is not set.<br>
-                        <a href="javascript: void(0)" id="example3">Run this example</a> and check the browser's console.
+                        <code>Cookie.read</code> returns <code>null</code> if the read cookie is not set.<br>
                     </p>
 
                     <pre class="brush:javascript">
-                    // read the value of the cookies set in example 1 and 2
-                    var example1 = $.cookie.read('Zebra_Cookie_Example1');
-                    var example2 = $.cookie.read('Zebra_Cookie_Example2');
+                    // read the value of the cookies set in the first 2 examples
+                    var session_cookie = Cookie.read('session_cookie');
+                    var expiring_cookie = Cookie.read('expiring_cookie');
 
-                    // if example 1 has been run
-                    if (example1) console.log('Value of cookie from example 1 is: "' + example1 + '"');
+                    // if the first example has been run
+                    if (session_cookie) console.log('Value of cookie from example 1 is: "' + session_cookie + '"');
 
-                    // if example 1 has not yet been run
-                    else console.log('"Zebra_Cookie_Example1" does not exist');
+                    // if the first example has not yet been run
+                    else console.log('"session_cookie" does not exist');
 
-                    // if example 2 has been run
-                    if (example2) console.log('Value of cookie from example 2 is: "' + example2 + '"');
+                    // if the second example has been run
+                    if (expiring_cookie) console.log('Value of cookie from example 2 is: "' + expiring_cookie + '"');
 
-                    // if example 2 has not yet been run
-                    else console.log('"Zebra_Cookie_Example2" does not exist');
+                    // if the second example has not yet been run
+                    else console.log('"expiring_cookie" does not exist');
                     </pre>
 
-                    <hr>
+                    <div class="well">
+                        <a href="javascript: void(0)" id="example3">Run the code</a> and check the browser's console.
+                    </div>
 
-                    <h5><strong>4. Deleting cookies</strong></h5>
+                    <div class="top">
+                        <a href="#top" class="small">⯅ To the top</a>
+                    </div>
 
-                    <p>
-                        <a href="javascript: void(0)" id="example4">Run this example</a> and check the browser's console.
-                    </p>
+                    <!-- =========================================================================================== -->
+
+                    <a name="deleting-cookies"></a>
+
+                    <h3><strong>4.</strong> Deleting cookies</h3>
 
                     <pre class="brush:javascript">
-                    // delete cookie from example 1
-                    $.cookie.destroy('Zebra_Cookie_Example1');
+                    // delete cookie from the first example
+                    Cookie.destroy('session_cookie');
 
-                    // print cookie values to the console
-                    console.log($.cookie.read('Zebra_Cookie_Example1'));
+                    // print cookie value to the console (should be "null")
+                    console.log(Cookie.read('session_cookie'));
+
+                    // delete cookie from the second example
+                    Cookie.destroy('expiring_cookie');
+
+                    // print cookie value to the console (should be "null")
+                    console.log(Cookie.read('session_cookie'));
                     </pre>
+
+                    <div class="well">
+                        <a href="javascript: void(0)" id="example4">Run the code</a> and check the browser's console.
+                    </div>
+
+                    <div class="top">
+                        <a href="#top" class="small">⯅ To the top</a>
+                    </div>
+
+                    <br>
+
+                    <p class="text-center">copyright &copy; 2011 - 2018 <a href="https://github.com/stefangabos/">stefan gabos</a></p>
+
+                    <br><br>
 
                 </div>
 
@@ -123,9 +206,9 @@
 
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stefangabos/Zebra_Cookie/dist/zebra_cookie.min.js"></script>
-        <script type="text/javascript" src="examples.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/zebra_cookie@2.0.0/dist/zebra_cookie.min.js"></script>
+        <script src="examples.js"></script>
 
     </body>
 
