@@ -12,9 +12,6 @@
     "client",
     "browser"
   ],
-  "dependencies": {
-    "jquery": ">=1.0.0"
-  },
   "license": "LGPL",
   "ignore": [
     "examples/README.md",
