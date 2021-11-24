@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/stefangabos/zebrajs/master/docs/images/logo.png" alt="zebrajs" align="right">
 
-# Zebra Cookie
+# Zebra Cookie &nbsp;[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A+ridiculously+small+(~500+bytes+minified)+JavaScript+API+for+writing,+reading+and+deleting+browser+cookies&url=https://github.com/stefangabos/Zebra_Datepicker&via=stefangabos&hashtags=jquery,javascript)
 
 *A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies*
 
@@ -11,6 +11,15 @@
 - very easy to write, read and delete cookies
 - simple and intuitive syntax
 - extremely small: with around 500 bytes when minified (350 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies
+
+## 🎂 Support the development of this project
+
+Your support means a lot and it keeps me motivated to keep working on open source projects.<br>
+If you like this project please ⭐ it by clicking on the star button at the top of the page.<br>
+If you are feeling generous, you can buy me a coffee by donating through PayPal, or you can become a sponsor.<br>
+Either way - **Thank you!** 🎉
+
+[<img src="https://img.shields.io/github/stars/stefangabos/zebra_cookie?color=green&label=star%20it%20on%20GitHub" width="132" height="20" alt="Star it on GitHub">](https://github.com/stefangabos/Zebra_Cookie) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BB4S849EMJH48) [<img src="https://img.shields.io/badge/-Sponsor-fafbfc?logo=GitHub%20Sponsors">](https://github.com/sponsors/stefangabos)
 
 ## Demo
 
@@ -142,7 +151,3 @@ Cookie.write('cookie_name', 'cookie_value');
 Cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
 
 ```
-
-## Support the development of this project
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BB4S849EMJH48)
