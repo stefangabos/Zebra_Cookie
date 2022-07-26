@@ -68,9 +68,7 @@ module.exports = function(grunt) {
                 compress: true,
                 mangle: true,
                 beautify: false,
-                output: {
-                    ie8: true
-                }
+                ie8: true
             },
             build: {
                 src: 'src/zebra_cookie.src.js',
