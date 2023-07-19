@@ -19,15 +19,12 @@ var Zebra_Cookie = function() {
          *  Removes a cookie from the browser.
          *
          *  <code>
-         *  // instantiate the Zebra_Cookie JavaScript object
-         *  var cookie = new Zebra_Cookie();
-         *
          *  // create a cookie that expires in 10 minutes
          *  // named "foo" and having "bar" as value
-         *  cookie.write('foo', 'bar', 10 * 60);
+         *  Cookie.write('foo', 'bar', 10 * 60);
          *
          *  // remove the cookie named "foo" from the browser
-         *  cookie.destroy('foo');
+         *  Cookie.destroy('foo');
          *  </code>
          *
          *  @param  string  name    The name of the cookie to remove.
@@ -45,15 +42,12 @@ var Zebra_Cookie = function() {
          *  Reads the value of a cookie.
          *
          *  <code>
-         *  // instantiate the Zebra_Cookie JavaScript object
-         *  var cookie = new Zebra_Cookie();
-         *
          *  // create a session cookie (expires when the browser is closed)
          *  // named "foo" and having "bar" as value
-         *  cookie.write('foo', 'bar');
+         *  Cookie.write('foo', 'bar');
          *
          *  // should show an alert box saying "bar"
-         *  alert(cookie.read('foo'));
+         *  alert(Cookie.read('foo'));
          *  </code>
          *
          *  @param  string  name    The name of the cookie to read.
@@ -79,12 +73,9 @@ var Zebra_Cookie = function() {
          *  Sets a cookie in the browser.
          *
          *  <code>
-         *  // instantiate the Zebra_Cookie JavaScript object
-         *  var cookie = new Zebra_Cookie();
-         *
          *  // create cookie that expires in 1 minute (60 seconds)
          *  // named "foo" and having "bar" as value
-         *  cookie.write('foo', 'bar', 60);
+         *  Cookie.write('foo', 'bar', 60);
          *  </code>
          *
          *  @param  string  name        The name of the cookie
