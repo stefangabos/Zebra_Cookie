@@ -1,3 +1,7 @@
+## version 2.0.1 (July 19, 2023)
+
+- minor update
+
 ## version 2.0.0 (August 05, 2018)
 
 - removed jQuery dependency
