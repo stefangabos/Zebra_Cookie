@@ -1,3 +1,7 @@
+## version 2.0.2 (May 07, 2024)
+
+- minor maintenance update
+
 ## version 2.0.1 (July 19, 2023)
 
 - minor update
