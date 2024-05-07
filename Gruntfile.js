@@ -28,9 +28,6 @@ module.exports = function(grunt) {
          *  http://eslint.org/docs/rules/
          **************************************************************************************************************/
         'eslint' : {
-            options: {
-                overrideConfigFile: 'eslint.json'
-            },
             src: ['src/zebra_cookie.src.js']
         },
 
