@@ -34,13 +34,6 @@ Zebra Cookie is available as a [npm package](https://www.npmjs.com/package/zebra
 npm install zebra_cookie --save
 ```
 
-Zebra Cookie is also available as a [Bower package](http://bower.io/). To install it use:
-
-```bash
-# the "--save" argument adds the plugin as a dependency in bower.json
-bower install zebra_cookie --save
-```
-
 ## How to use
 
 Load Zebra Cookie:

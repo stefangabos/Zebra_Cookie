@@ -5,7 +5,6 @@ src/*
 .gitattributes
 .gitignore
 .npmignore
-bower.json
 eslint.config.js
 Gruntfile.js
 package.json
