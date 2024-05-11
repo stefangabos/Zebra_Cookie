@@ -6,7 +6,7 @@
  *  Read more {@link https://github.com/stefangabos/Zebra_Cookie/ here}
  *
  *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    2.0.3 (last revision: May 07, 2024)
+ *  @version    2.0.4 (last revision: May 11, 2024)
  *  @copyright  (c) 2011 - 2024 Stefan Gabos
  *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
  *  @package    Zebra_Cookie
