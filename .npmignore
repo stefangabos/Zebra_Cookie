@@ -6,7 +6,7 @@ src/*
 .gitignore
 .npmignore
 bower.json
-eslint.json
+eslint.config.js
 Gruntfile.js
 package.json
 package-lock.json
