@@ -1,16 +1,16 @@
 <img src="https://raw.githubusercontent.com/stefangabos/zebrajs/master/docs/images/logo.png" alt="zebrajs" align="right">
 
-# Zebra Cookie &nbsp;[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A+ridiculously+small+(~500+bytes+minified)+JavaScript+API+for+writing,+reading+and+deleting+browser+cookies&url=https://github.com/stefangabos/Zebra_Datepicker&via=stefangabos&hashtags=jquery,javascript)
+# JavaScript Cookie Management Made Easy<br>with Zebra Cookie &nbsp;[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A+ridiculously+small+(~500+bytes+minified)+JavaScript+API+for+writing,+reading+and+deleting+browser+cookies&url=https://github.com/stefangabos/Zebra_Datepicker&via=stefangabos&hashtags=jquery,javascript)
 
 *A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies*
 
 [![npm](https://img.shields.io/npm/v/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![Total](https://img.shields.io/npm/dt/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![Monthly](https://img.shields.io/npm/dm/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![](https://data.jsdelivr.com/v1/package/npm/zebra_cookie/badge?style=rounded)](https://www.jsdelivr.com/package/npm/zebra_cookie) [![License](https://img.shields.io/npm/l/zebra_cookie.svg)](https://github.com/stefangabos/Zebra_Cookie/blob/master/LICENSE.md)
 
-## Features
+## Zebra Cookie: Lightweight JavaScript Library for Easy Cookie Management
 
 - very easy to write, read and delete cookies
 - simple and intuitive syntax
-- extremely small: with around 500 bytes when minified (350 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies
+- extremely small: with around 500 bytes when minified (350 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies from JavaScript
 
 ## 🎂 Support the development of this project
 
@@ -34,7 +34,7 @@ Zebra Cookie is available as a [npm package](https://www.npmjs.com/package/zebra
 npm install zebra_cookie --save
 ```
 
-## How to use
+## How to Set, Read, and Delete Cookies with Zebra Cookie
 
 Load Zebra Cookie:
 
