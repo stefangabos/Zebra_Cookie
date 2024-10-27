@@ -14,20 +14,9 @@
 
 Zebra Cookie is a convenient choice if you want a small, dependency-free solution for cookie management, especially for projects where managing cookies is required but using a larger library isn't necessary.
 
-## 🎂 Support the development of this project
+Check out the [demos](https://stefangabos.github.io/Zebra_Cookie/)
 
-Your support means a lot and it keeps me motivated to keep working on open source projects.<br>
-If you like this project please ⭐ it by clicking on the star button at the top of the page.<br>
-If you are feeling generous, you can buy me a coffee by donating through PayPal, or you can become a sponsor.<br>
-Either way - **Thank you!** 🎉
-
-[<img src="https://img.shields.io/github/stars/stefangabos/zebra_cookie?color=green&label=star%20it%20on%20GitHub" width="132" height="20" alt="Star it on GitHub">](https://github.com/stefangabos/Zebra_Cookie) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BB4S849EMJH48) [<img src="https://img.shields.io/badge/-Sponsor-fafbfc?logo=GitHub%20Sponsors">](https://github.com/sponsors/stefangabos)
-
-## Demo
-
-See the [demos](https://stefangabos.github.io/Zebra_Cookie/)
-
-## Installation
+## Installation Instructions for Zebra Cookie JavaScript Library
 
 Zebra Cookie is available as a [npm package](https://www.npmjs.com/package/zebra_cookie). To install it use:
 
@@ -146,3 +135,11 @@ Cookie.write('cookie_name', 'cookie_value');
 Cookie.write('cookie_name', 'cookie_value', 24 * 60 * 60);
 
 ```
+## 🎂 Support the development of this project
+
+Your support means a lot and it keeps me motivated to keep working on open source projects.<br>
+If you like this project please ⭐ it by clicking on the star button at the top of the page.<br>
+If you are feeling generous, you can buy me a coffee by donating through PayPal, or you can become a sponsor.<br>
+Either way - **Thank you!** 🎉
+
+[<img src="https://img.shields.io/github/stars/stefangabos/zebra_cookie?color=green&label=star%20it%20on%20GitHub" width="132" height="20" alt="Star it on GitHub">](https://github.com/stefangabos/Zebra_Cookie) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BB4S849EMJH48) [<img src="https://img.shields.io/badge/-Sponsor-fafbfc?logo=GitHub%20Sponsors">](https://github.com/sponsors/stefangabos)
