@@ -2,15 +2,17 @@
 
 # JavaScript Cookie Management Made Easy<br>with Zebra Cookie &nbsp;[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A+ridiculously+small+(~500+bytes+minified)+JavaScript+API+for+writing,+reading+and+deleting+browser+cookies&url=https://github.com/stefangabos/Zebra_Datepicker&via=stefangabos&hashtags=jquery,javascript)
 
-*A ridiculously small (~500 bytes minified) JavaScript API for writing, reading and deleting browser cookies*
+*A very lightweight JavaScript library for easy cookie management — set, read, and delete browser cookies effortlessly*
 
 [![npm](https://img.shields.io/npm/v/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![Total](https://img.shields.io/npm/dt/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![Monthly](https://img.shields.io/npm/dm/zebra_cookie.svg)](https://www.npmjs.com/package/zebra_cookie) [![](https://data.jsdelivr.com/v1/package/npm/zebra_cookie/badge?style=rounded)](https://www.jsdelivr.com/package/npm/zebra_cookie) [![License](https://img.shields.io/npm/l/zebra_cookie.svg)](https://github.com/stefangabos/Zebra_Cookie/blob/master/LICENSE.md)
 
 ## Zebra Cookie: Lightweight JavaScript Library for Easy Cookie Management
 
-- very easy to write, read and delete cookies
+- very easy to write, read and delete browser cookies
 - simple and intuitive syntax
 - extremely small: with around 500 bytes when minified (350 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies from JavaScript
+
+Zebra Cookie is a convenient choice if you want a small, dependency-free solution for cookie management, especially for projects where managing cookies is required but using a larger library isn't necessary.
 
 ## 🎂 Support the development of this project
 
