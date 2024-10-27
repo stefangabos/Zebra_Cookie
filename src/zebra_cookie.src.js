@@ -6,7 +6,7 @@
  *  Read more {@link https://github.com/stefangabos/Zebra_Cookie/ here}
  *
  *  @author     Stefan Gabos <contact@stefangabos.ro>
- *  @version    2.0.4 (last revision: May 11, 2024)
+ *  @version    3.0.0 (last revision: October 27, 2024)
  *  @copyright  (c) 2011 - 2024 Stefan Gabos
  *  @license    http://www.gnu.org/licenses/lgpl-3.0.txt GNU LESSER GENERAL PUBLIC LICENSE
  *  @package    Zebra_Cookie
@@ -59,13 +59,13 @@ var Zebra_Cookie = function() {
             var
 
                 // prepare the regular expression used to find the sought cookie in document.cookie
-                expression = new RegExp('(^|; )' + encodeURIComponent(name) + '=(.*?)($|;)'),
+                expression = new RegExp('(?:^|; )' + encodeURIComponent(name) + '=([^;]*)'),
 
                 // search for the cookie and its value
                 matches = document.cookie.match(expression);
 
             // return the cookie's value
-            return matches ? decodeURIComponent(matches[2]) : null;
+            return matches ? decodeURIComponent(matches[1]) : null;
 
         };
 
@@ -108,18 +108,15 @@ var Zebra_Cookie = function() {
          *
          *  @return boolean             Returns TRUE if the cookie was successfully set, or FALSE otherwise.
          */
-        this.write = function(name, value, expire, path, domain, secure) {
+        this.write = function(name, value, expire = 0, path = '/', domain = '', secure = false) {
 
             var date = new Date();
 
             // if "expire" is a number, set the expiration date to as many seconds from now as specified by "expire"
             if (expire && typeof expire === 'number') date.setTime(date.getTime() + expire * 1000);
 
-            // if "expire" is not specified or is a bogus value, set it to "null"
-            else expire = null;
-
             // set the cookie
-            return (document.cookie =
+            document.cookie =
 
                 // set the name/value pair
                 // and also make sure we escape some special characters in the process
@@ -129,13 +126,16 @@ var Zebra_Cookie = function() {
                 (expire ? '; expires=' + date.toGMTString() : '') +
 
                 // if specified, set the path on the server in which the cookie will be available on
-                '; path=' + (path || '/') +
+                '; path=' + path +
 
                 // if specified, set the the domain that the cookie is available on
                 (domain ? '; domain=' + domain : '') +
 
                 // if required, set the cookie to be transmitted only over a secure HTTPS connection from the client
-                (secure ? '; secure' : ''));
+                (secure ? '; secure' : '');
+
+            // return success based on whether the cookie was set
+            return this.read(name) === value;
 
         };
 
