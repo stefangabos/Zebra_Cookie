@@ -1,10 +1,12 @@
 examples/README.md
 node_modules/*
 src/*
+.git/*
 .github/*
 .gitattributes
 .gitignore
 .npmignore
+.DS_Store
 eslint.config.js
 Gruntfile.js
 package.json
