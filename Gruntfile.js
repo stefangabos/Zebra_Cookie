@@ -37,12 +37,13 @@ module.exports = function(grunt) {
          **************************************************************************************************************/
         'jshint': {
             options: {
-                strict:     false,       //  requires all functions to run in ECMAScript 5's strict mode
+                strict:     false,      //  requires all functions to run in ECMAScript 5's strict mode
                 asi:        true,       //  suppresses warnings about missing semicolons
                 globals: {              //  white list of global variables that are not formally defined in the source code
                     'alert':            true,
                     'console':          true,
                 },
+                esversion:  6,          //  allow ECMAScript 6 (2015) specific syntax
                 browser:    true,       //  defines globals exposed by modern browsers (like `document` and `navigator`)
                 bitwise:    true,       //  prohibits the use of bitwise operators such as ^ (XOR), | (OR) and others
                 curly:      false,      //  whether to always put curly braces around blocks in loops and conditionals
