@@ -1,3 +1,7 @@
+## version 3.0.0 (October 27, 2024)
+
+- improved overall performance
+
 ## version 2.0.3 (May 07, 2024)
 
 - minor maintenance update
