@@ -122,16 +122,8 @@ Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
 |`expire` | The life time of the cookie, in seconds.<br>If set to `0`, or omitted, the cookie will expire at the end of the session (when the browser closes) | Optional | `0`
 | `path`| The path on the server in which the cookie will be available on.<br>If set to `/`, the cookie will be available within the entire domain. If set to `/foo/`, the cookie will only be available within the `/foo/` directory and all subdirectories such as `/foo/bar/` of the domain | Optional | `/`
 |`domain` | The domain that the cookie will be available on.<br>To make the cookie available on all sub-domains of `example.com`, domain should be set to to `.example.com`. The `.` (dot) is not required but makes it compatible with more browsers. Setting it to `www.example.com` will make the cookie available only in the `www` sub-domain | Optional | `""`
-| `secure` | Indicates whether cookie information should only be transmitted over a HTTPS connection.<br>Valid values are `TRUE`, `FALSE` and `""` (empty string).<br>Default value is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https`, or `FALSE` otherwise.
-
-`SameSite` - *(optional)* - Controls when cookies are sent with cross-site requests, providing protection against cross-site request forgery attacks.<br><br>
-Possible values are
-- `Strict` - cookie is only sent in a first-party context (same-site requests only)
-- `Lax` - cookie is sent with same-site requests and top-level navigation (links)
-- `None` - cookie is sent with all cross-site requests (requires `secure=true`)
-
-Default is `Lax` to match modern browser behavior.
->   When using `None`, the `secure` parameter must be set to `TRUE`!
+| `secure` | Indicates whether cookie information should only be transmitted over a HTTPS connection.<br>Valid values are `TRUE`, `FALSE` and `""` (empty string).<br>Default value is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https`, or `FALSE` otherwise | Optional / Automatic | `""` |
+|`SameSite` | Controls when cookies are sent with cross-site requests, providing protection against cross-site request forgery attacks.<br>Possible values are:<br>- `Strict` - cookie is only sent in a first-party context (same-site requests only)<br>- `Lax` - cookie is sent with same-site requests and top-level navigation (links)<br>- `None` - cookie is sent with all cross-site requests (requires `secure=true`)<br>Default is `Lax` to match modern browser behavior.<br>_When using `None` as value, the `secure` parameter must be set to `TRUE`!_ | Optional | `Lax` |
 
 ```javascript
 // create a session cookie (expires when the browser closes)
