@@ -42,7 +42,7 @@ Alternatively, you can load Zebra Cookie from [JSDelivr CDN](https://www.jsdeliv
 <script src="https://cdn.jsdelivr.net/npm/zebra_cookie@latest/dist/zebra_cookie.min.js"></script>
 
 <!-- for a specific version -->
-<script src="https://cdn.jsdelivr.net/npm/zebra_cookie@3.0.0/dist/zebra_cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zebra_cookie@4.0.0/dist/zebra_cookie.min.js"></script>
 
 <!-- replacing "min" with "src" will serve you the non-compressed version -->
 ```
