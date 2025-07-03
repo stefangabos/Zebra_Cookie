@@ -15,6 +15,9 @@ var Zebra_Cookie = function() {
 
         'use strict';
 
+        // cookie size limit as per RFC 6265
+        var MAX_COOKIE_SIZE = 4096;
+
         /**
          *  Removes a cookie from the browser.
          *
@@ -139,6 +142,9 @@ var Zebra_Cookie = function() {
 
             // return success based on whether the cookie was set
             return this.read(name) === value;
+            // trigger an error if the cookie's size exceeds the maximum allowed limit
+            if (cookie.length > MAX_COOKIE_SIZE) throw new Error('Cookie size (' + cookie.length + ' bytes) exceeds the maximum allowed size (' + MAX_COOKIE_SIZE + ' bytes)');
+
 
         };
 
