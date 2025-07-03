@@ -138,7 +138,10 @@ var Zebra_Cookie = function() {
                 (domain ? '; domain=' + domain : '') +
 
                 // if required, set the cookie to be transmitted only over a secure HTTPS connection from the client
-                (secure ? '; secure' : '');
+                (secure ? '; secure' : '') +
+
+                // control when cookies are sent with cross-site requests
+                (sameSite ? '; SameSite=' + sameSite : '');
 
             // return success based on whether the cookie was set
             return this.read(name) === value;
