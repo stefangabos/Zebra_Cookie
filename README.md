@@ -76,9 +76,9 @@ Removes a cookie from the browser.
 
 Returns `TRUE` on success or `FALSE` otherwise.
 
-#### Arguments
-
-`name` - the name of the cookie to remove
+| Argument | Description |
+|---|---|
+|`name` | The name of the cookie to remove
 
 ```javascript
 // create a session cookie (expires when the browser closes)
@@ -94,9 +94,9 @@ Reads the value of a cookie.
 
 Returns the value of the requested cookie or `null` if the cookie doesn't exist.
 
-#### Arguments
-
-`name` - the name of the cookie to read
+| Argument | Description |
+|---|---|
+|`name` | The name of the cookie to read
 
 ```javascript
 // create a session cookie (expires when the browser closes)
@@ -113,7 +113,7 @@ Sets a cookie in the browser.
 
 Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
 
-#### Arguments
+Additionally, it will throw an error if the cookie name is invalid, the cookie's size exceeds the maximum allowed limit (`4KB`), or if `SameSite=None` without `secure=true`.
 
 | Argument | Description | Required | Default |
 |---|---|---|---|
@@ -122,8 +122,8 @@ Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
 |`expire` | The life time of the cookie, in seconds.<br>If set to `0`, or omitted, the cookie will expire at the end of the session (when the browser closes) | Optional | `0`
 | `path`| The path on the server in which the cookie will be available on.<br>If set to `/`, the cookie will be available within the entire domain. If set to `/foo/`, the cookie will only be available within the `/foo/` directory and all subdirectories such as `/foo/bar/` of the domain | Optional | `/`
 |`domain` | The domain that the cookie will be available on.<br>To make the cookie available on all sub-domains of `example.com`, domain should be set to to `.example.com`. The `.` (dot) is not required but makes it compatible with more browsers. Setting it to `www.example.com` will make the cookie available only in the `www` sub-domain | Optional | `""`
-| `secure` | Indicates whether cookie information should only be transmitted over a HTTPS connection.<br><br>Valid values are `TRUE`, `FALSE` and `""` (empty string).<br><br>Default value is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https`, or `FALSE` otherwise | Optional / Automatic | `""` |
-|`SameSite` | Controls when cookies are sent with cross-site requests, providing protection against cross-site request forgery attacks.<br><br>Possible values are:<br><br>- `Strict` - cookie is only sent in a first-party context (same-site requests only)<br>- `Lax` - cookie is sent with same-site requests and top-level navigation (links)<br>- `None` - cookie is sent with all cross-site requests (requires `secure=true`)<br><br>Default is `Lax` to match modern browser behavior.<br><br>_When using `None` as value, the `secure` parameter must be set to `TRUE`!_ | Optional | `Lax` |
+| `secure` | Indicates whether cookie information should only be transmitted over a HTTPS connection.<br><br>Valid values are `TRUE`, `FALSE` and `""` (empty string).<br><br>Default value is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https`, or `FALSE` otherwise | Optional / Automatic | `""`
+|`SameSite` | Controls when cookies are sent with cross-site requests, providing protection against cross-site request forgery attacks.<br><br>Possible values are:<br><br>- `Strict` - cookie is only sent in a first-party context (same-site requests only)<br>- `Lax` - cookie is sent with same-site requests and top-level navigation (links)<br>- `None` - cookie is sent with all cross-site requests (requires `secure=true`)<br><br>Default is `Lax` to match modern browser behavior.<br><br>_When using `None` as value, the `secure` parameter must be set to `TRUE`!_ | Optional | `Lax`
 
 ```javascript
 // create a session cookie (expires when the browser closes)
