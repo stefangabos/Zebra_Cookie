@@ -123,7 +123,7 @@ var Zebra_Cookie = function() {
                 encodeURIComponent(name) + '=' + encodeURIComponent(value) +
 
                 // if specified, set the expiry date
-                (expire ? '; expires=' + date.toGMTString() : '') +
+                (expire ? '; expires=' + date.toUTCString() : '') +
 
                 // if specified, set the path on the server in which the cookie will be available on
                 '; path=' + path +
