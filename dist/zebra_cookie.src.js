@@ -117,10 +117,10 @@ var Cookie = (function() {
         *   @param§boolean  secure      (Optional/Automatic) Indicates whether cookie information should only be transmitted
         *                               over a HTTPS connection.
         *
-        *                               Valid values are TRUE, FALSE and "" (empty string).
+        *                               Valid values are `TRUE`, `FALSE` and `""` (empty string).
         *
-        *                               Default is "" (an empty string) which will instruct the script to automatically
-        *                               set this attribute to TRUE when the current page is https or FALSE otherwise.
+        *                               Default value is `""` (an empty string) which will instruct the script to automatically
+        *                               set this attribute to `TRUE` when the current page is https, or `FALSE` otherwise.
         *
         *   @param  string  sameSite    (Optional) Controls when cookies are sent with cross-site requests, providing
         *                               protection against cross-site request forgery attacks.
@@ -133,11 +133,12 @@ var Cookie = (function() {
         *
         *                               Default is `Lax` to match modern browser behavior.
         *
-        *                               >   When using `None`, the secure parameter must be set to TRUE!
+        *                               >   When using `None` as value, the `secure` parameter must be set to `TRUE`!
         *
-        *   @return boolean             Returns TRUE if the cookie was successfully set, or FALSE otherwise.
+        *   @return boolean             Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
         *
-        *                               Throws an error if the cookie name is invalid or if SameSite=None without secure=true.
+        *                               Additionally, it will throw an error if the cookie name is invalid, the cookie's
+        *                               size exceeds the maximum allowed limit (4KB), or if `SameSite=None` without `secure=true`.
         */
         this.write = function(name, value, expire = 0, path = '/', domain = '', secure = '', sameSite = 'Lax') {
 
