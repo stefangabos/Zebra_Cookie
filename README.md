@@ -16,6 +16,8 @@ Zebra Cookie is a convenient choice if you want a small, dependency-free solutio
 
 Check out the [demos](https://stefangabos.github.io/Zebra_Cookie/)
 
+> Starting with version 4.0.0 this library introduced the `max-age` and `SameSite` attributes used in modern browsers and therefore broke compatibility with pre-2018 browsers like IE11 and older Safari. Please use the 3.x.x branch if you need to support those browsers.
+
 ## Installation Instructions for Zebra Cookie JavaScript Library
 
 Zebra Cookie is available as a [npm package](https://www.npmjs.com/package/zebra_cookie). To install it use:
