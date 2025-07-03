@@ -122,7 +122,7 @@ var Cookie = (function() {
         *                               Default value is `""` (an empty string) which will instruct the script to automatically
         *                               set this attribute to `TRUE` when the current page is https, or `FALSE` otherwise.
         *
-        *   @param  string  sameSite    (Optional) Controls when cookies are sent with cross-site requests, providing
+        *   @param  string  SameSite    (Optional) Controls when cookies are sent with cross-site requests, providing
         *                               protection against cross-site request forgery attacks.
         *
         *                               Possible values are
@@ -140,7 +140,7 @@ var Cookie = (function() {
         *                               Additionally, it will throw an error if the cookie name is invalid, the cookie's
         *                               size exceeds the maximum allowed limit (4KB), or if `SameSite=None` without `secure=true`.
         */
-        this.write = function(name, value, expire = 0, path = '/', domain = '', secure = '', sameSite = 'Lax') {
+        this.write = function(name, value, expire = 0, path = '/', domain = '', secure = '', SameSite = 'Lax') {
 
             var date = new Date(), cookie;
 
@@ -150,8 +150,8 @@ var Cookie = (function() {
             // if we need to automatically set it
             if (secure === '') secure = location.protocol === 'https:';
 
-            // if `sameSite` is "None", `secure` must be "true"
-            if (sameSite === 'None' && !secure) throw new Error('SameSite=None requires secure=true');
+            // if `SameSite` is "None", `secure` must be "true"
+            if (SameSite === 'None' && !secure) throw new Error('SameSite=None requires secure=true');
 
             // if "expire" is a number, set the expiration date to as many seconds from now as specified by "expire"
             if (expire && typeof expire === 'number') date.setTime(date.getTime() + expire * 1000);
@@ -179,7 +179,7 @@ var Cookie = (function() {
                 (secure ? '; secure' : '') +
 
                 // control when cookies are sent with cross-site requests
-                (sameSite ? '; SameSite=' + sameSite : '');
+                (SameSite ? '; SameSite=' + SameSite : '');
 
             // trigger an error if the cookie's size exceeds the maximum allowed limit
             if (cookie.length > MAX_COOKIE_SIZE) throw new Error('Cookie size (' + cookie.length + ' bytes) exceeds the maximum allowed size (' + MAX_COOKIE_SIZE + ' bytes)');
