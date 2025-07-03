@@ -1,3 +1,13 @@
+## version 4.0.0 (July 03, 2025)
+
+- the library can now automatically set the `secure` attribute to `true` when on `https`
+- added support for the `SameSite` attribute
+- added support for the `max-age` attribute
+- added cookie name validation as per RFC 6265
+- added cookie size validation as per RFC 6265
+- switched out deprecated method `toGMTString` with `toUTCString`
+> the introduction of support for the `max-age` and `SameSite` attributes breaks compatibility with pre-2018 browsers like IE11 and older Safari - please use version 3.0.0 if you need to support those browsers
+
 ## version 3.0.0 (October 27, 2024)
 
 - improved overall performance
