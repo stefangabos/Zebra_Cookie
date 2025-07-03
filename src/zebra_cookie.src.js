@@ -125,6 +125,9 @@ var Zebra_Cookie = function() {
                 // if specified, set the expiry date
                 (expire ? '; expires=' + date.toUTCString() : '') +
 
+                // if specified, set the expiry time (for modern browsers)
+                (expire ? '; max-age=' + expire : '') +
+
                 // if specified, set the path on the server in which the cookie will be available on
                 '; path=' + path +
 
