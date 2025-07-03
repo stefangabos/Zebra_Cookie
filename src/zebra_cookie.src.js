@@ -114,6 +114,14 @@ var Zebra_Cookie = function() {
         this.write = function(name, value, expire = 0, path = '/', domain = '', secure = false) {
 
             var date = new Date();
+            // make sure the name is valid and in accordance with RFC 6265
+            if (typeof name !== 'string' || name.trim() === '' || !/^[!#$%&'*+\-.0-9A-Z^_`a-z|~]+$/i.test(name.trim())) throw new Error('Cookie name must be a non-empty string consisting of alphanumeric characters and !#$%&\'*+-.^_`|~');
+
+            // if we need to automatically set it
+            if (secure === '') secure = location.protocol === 'https:';
+
+            // if `sameSite` is "None", `secure` must be "true"
+            if (sameSite === 'None' && !secure) throw new Error('SameSite=None requires secure=true');
 
             // if "expire" is a number, set the expiration date to as many seconds from now as specified by "expire"
             if (expire && typeof expire === 'number') date.setTime(date.getTime() + expire * 1000);
