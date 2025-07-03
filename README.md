@@ -10,7 +10,7 @@
 
 - very easy to write, read and delete browser cookies
 - simple and intuitive syntax
-- extremely small: with around 500 bytes when minified (350 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies from JavaScript
+- extremely small: with around 1KB when minified (605 bytes gzipped), it is probably the smallest and most optimized API for handling browser cookies from JavaScript
 
 Zebra Cookie is a convenient choice if you want a small, dependency-free solution for cookie management, especially for projects where managing cookies is required but using a larger library isn't necessary.
 
@@ -107,7 +107,7 @@ Cookie.write('cookie_name', 'cookie_value');
 Cookie.read('cookie_name');
 ```
 
-### `write(name, value, [expire = 0], [path = /], [domain = ""], [secure = FALSE])`
+### `write(name, value, [expire = 0], [path = /], [domain = ""], [secure = ""], [SameSite = "Lax"])`
 
 Sets a cookie in the browser.
 
@@ -125,7 +125,19 @@ Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
 
 `domain` - *(optional)* - The domain that the cookie will be available on. To make the cookie available on all sub-domains of `example.com`, domain should be set to to `.example.com`. The `.` (dot) is not required but makes it compatible with more browsers. Setting it to `www.example.com` will make the cookie available only in the `www` sub-domain.
 
-`secure` - *(optional)* - Indicates whether cookie information should only be transmitted over a HTTPS connection. Default is `FALSE`.
+`secure` - *(optional)* - Indicates whether cookie information should only be transmitted over a HTTPS connection.<br><br>
+Valid values are `TRUE`, `FALSE` and `""` (empty string).
+
+Default is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https` or `FALSE` otherwise.
+
+`SameSite` - *(optional)* - Controls when cookies are sent with cross-site requests, providing protection against cross-site request forgery attacks.<br><br>
+Possible values are
+- `Strict` - cookie is only sent in a first-party context (same-site requests only)
+- `Lax` - cookie is sent with same-site requests and top-level navigation (links)
+- `None` - cookie is sent with all cross-site requests (requires `secure=true`)
+
+Default is `Lax` to match modern browser behavior.
+>   When using `None`, the secure parameter must be set to `TRUE`!
 
 ```javascript
 // create a session cookie (expires when the browser closes)
