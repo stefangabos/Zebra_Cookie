@@ -115,20 +115,14 @@ Returns `TRUE` if the cookie was successfully set, or `FALSE` otherwise.
 
 #### Arguments
 
-`name` - The name of the cookie to set
-
-`value` - The value to set
-
-`expire` - *(optional)* - The life time of the cookie, in seconds. If set to `0`, or omitted, the cookie will expire at the end of the session (when the browser closes).
-
-`path` - *(optional)* - The path on the server in which the cookie will be available on. If set to `/`, the cookie will be available within the entire domain. If set to `/foo/`, the cookie will only be available within the `/foo/` directory and all subdirectories such as `/foo/bar/` of the domain. If omitted, it will be set to `/`.
-
-`domain` - *(optional)* - The domain that the cookie will be available on. To make the cookie available on all sub-domains of `example.com`, domain should be set to to `.example.com`. The `.` (dot) is not required but makes it compatible with more browsers. Setting it to `www.example.com` will make the cookie available only in the `www` sub-domain.
-
-`secure` - *(optional)* - Indicates whether cookie information should only be transmitted over a HTTPS connection.<br><br>
-Valid values are `TRUE`, `FALSE` and `""` (empty string).
-
-Default is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https` or `FALSE` otherwise.
+| Argument | Description | Required | Default |
+|---|---|---|---|
+|`name` | The name of the cookie to set | Yes |
+|`value` | The value to set | Yes |
+|`expire` | The life time of the cookie, in seconds.<br>If set to `0`, or omitted, the cookie will expire at the end of the session (when the browser closes) | Optional | `0`
+| `path`| The path on the server in which the cookie will be available on.<br>If set to `/`, the cookie will be available within the entire domain. If set to `/foo/`, the cookie will only be available within the `/foo/` directory and all subdirectories such as `/foo/bar/` of the domain | Optional | `/`
+|`domain` | The domain that the cookie will be available on.<br>To make the cookie available on all sub-domains of `example.com`, domain should be set to to `.example.com`. The `.` (dot) is not required but makes it compatible with more browsers. Setting it to `www.example.com` will make the cookie available only in the `www` sub-domain | Optional | `""`
+| `secure` | Indicates whether cookie information should only be transmitted over a HTTPS connection.<br>Valid values are `TRUE`, `FALSE` and `""` (empty string).<br>Default value is `""` (an empty string) which will instruct the script to automatically set this attribute to `TRUE` when the current page is `https`, or `FALSE` otherwise.
 
 `SameSite` - *(optional)* - Controls when cookies are sent with cross-site requests, providing protection against cross-site request forgery attacks.<br><br>
 Possible values are
@@ -137,7 +131,7 @@ Possible values are
 - `None` - cookie is sent with all cross-site requests (requires `secure=true`)
 
 Default is `Lax` to match modern browser behavior.
->   When using `None`, the secure parameter must be set to `TRUE`!
+>   When using `None`, the `secure` parameter must be set to `TRUE`!
 
 ```javascript
 // create a session cookie (expires when the browser closes)
